@@ -19,7 +19,7 @@ public class users {
     private String surname;
 
     @ColumnInfo(name = "birthYear")
-    private int birthYear;
+    private String birthYear;
 
     @ColumnInfo(name = "username")
     private String username;
@@ -27,10 +27,18 @@ public class users {
     @ColumnInfo(name = "password")
     private String password;
 
-    public users(String name, String password) {
+    public users(String name, String surname, String birthYear, String username, String password) {
         this.name = name;
+        this.surname = surname;
+        this.birthYear = birthYear;
+        this.username = username;
         this.password = password;
     }
+
+    /*public users(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }*/
 
     public int getId() {
         return id;
@@ -56,11 +64,11 @@ public class users {
         this.surname = surname;
     }
 
-    public int getBirthYear() {
+    public String getBirthYear() {
         return birthYear;
     }
 
-    public void setBirthYear(int birthYear) {
+    public void setBirthYear(String birthYear) {
         this.birthYear = birthYear;
     }
 
